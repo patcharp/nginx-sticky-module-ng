@@ -20,8 +20,12 @@
 #define MD5_CBLOCK  64
 #define MD5_LBLOCK  (MD5_CBLOCK/4)
 #define MD5_DIGEST_LENGTH 16
+#ifndef SHA_CBLOCK
 #define SHA_CBLOCK 64
+#endif
+#ifndef SHA_DIGEST_LENGTH
 #define SHA_DIGEST_LENGTH 20
+#endif
 
 // /* - bugfix for compiling on sles11 - needs gcc4.6 or later*/
 // #pragma GCC diagnostic ignored "-Wuninitialized"
